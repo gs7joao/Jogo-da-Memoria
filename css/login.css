@@ -1,0 +1,65 @@
+.login-form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* ViewPort height, altura da janela 100%*/
+    background-color: #333;
+    justify-content: center;
+}
+
+.login-header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+/* Deixando IMG Flutuando*/
+@keyframes float{
+	0%,100%{
+		transform:translatey(0)
+	}
+	50%{
+		transform:translatey(-20px)
+	}
+}
+
+.login-header img {
+    width: 200px;
+     animation: float 6s ease-in-out infinite;
+}
+
+.login-header h1 {
+    color: #fff;
+    font: 1.5em;
+}
+
+.login-input {
+    border: 2px solid #fff;
+    border-radius: 5px;
+    color: #333;
+    font-size: 1em;
+    margin-bottom: 15px;
+    max-width: 300px;
+    outline: none;
+    padding: 15px;
+    width: 100%;
+}
+
+.login-button {
+    background-color: #ee665c;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    max-width: 300px;
+    font-size: 1em;
+    padding: 15px;
+    width: 100%;
+}
+
+.login-button:disabled {
+    background-color: #eee;
+    color: #333;
+    cursor: auto;
+}

@@ -1,0 +1,14 @@
+/* 
+ Arquivo .css para resetar e deixar padrão do css do projeto inicial
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    list-style: none;
+    border: none;
+    font-family: 'Press Start 2P', cursive;
+}
