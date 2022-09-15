@@ -15,7 +15,7 @@ const handleSubmit = (event) => {
     event.preventDefault(); //Bloqueia o evento padrão do formulario
     localStorage.setItem('player', input.value); //Salvando nome do jogador na localStorage
 
-    window.location = '/projetos/memoria-game/pages/game.html';
+    window.location = './pages/game.html';
 }
 
 input.addEventListener('input', validateInput); // adicionando evento no campo input
