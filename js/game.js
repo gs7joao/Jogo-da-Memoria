@@ -1,5 +1,10 @@
 // Pegando a div Grid
 const grid = document.querySelector('.grid');
+// Pegando o Span Player
+const spanPlayer = document.querySelector('.player');
+// Pegando o contador Time
+const timer = document.querySelector('.timer');
+
 
 // Aray com todos as imgs dos cards 
 const characters = [
@@ -32,7 +37,10 @@ const checkEndGame = () => {
     const disabledCards = document.querySelectorAll('.disabled-card');
     console.log(disabledCards)
     if (disabledCards.length == 20) {
-        alert('Parabéns, você Conseguiu!');
+        // setTimeout(() => {
+            clearInterval(this.loopTime);
+            alert(`Parabéns, ${spanPlayer.innerHTML}! Seu tempo foi: ${timer.innerHTML}`);
+        // }, 5000)
     }
 }
 
@@ -126,4 +134,25 @@ const loadGame = () => {
     })
 }
 
-loadGame();
+//Contador do time
+const startTimer = () => {
+
+    //pegando o tempo atual do meu timer (+ na frente converte o html em int)
+    this.loopTime = setInterval(() => {
+                        const currentTime = +timer.innerHTML;
+                        timer.innerHTML = currentTime + 1;
+                    },1000);
+    
+}
+
+window.onload = () => {
+    // Recuperando o nome do player salvo na LocalStorage e atribuindo ao span Plater
+    spanPlayer.innerHTML = localStorage.getItem('player');
+    startTimer();
+    loadGame();
+}
+
+
+
+
+
