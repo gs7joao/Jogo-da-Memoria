@@ -37,10 +37,10 @@ const checkEndGame = () => {
     const disabledCards = document.querySelectorAll('.disabled-card');
     console.log(disabledCards)
     if (disabledCards.length == 20) {
-        // setTimeout(() => {
+        setTimeout(() => {
             clearInterval(this.loopTime);
             alert(`Parabéns, ${spanPlayer.innerHTML}! Seu tempo foi: ${timer.innerHTML}`);
-        // }, 5000)
+        }, 270)
     }
 }
 
